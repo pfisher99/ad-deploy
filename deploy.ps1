@@ -1,6 +1,7 @@
 #
 # Windows PowerShell script for AD DS Deployment
 #
+Add-WindowsFeature AD-Domain-Services
 
 Import-Module ADDSDeployment
 Install-ADDSForest `
