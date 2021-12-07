@@ -1,6 +1,7 @@
 #
 # Windows PowerShell script for AD DS Deployment
 #
+Rename-Computer homedc01
 Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
 
 Import-Module ADDSDeployment
