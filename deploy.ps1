@@ -1,7 +1,7 @@
 #
 # Windows PowerShell script for AD DS Deployment
 #
-Add-WindowsFeature AD-Domain-Services
+Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
 
 Import-Module ADDSDeployment
 Install-ADDSForest `
@@ -16,3 +16,6 @@ Install-ADDSForest `
 -NoRebootOnCompletion:$false `
 -SysvolPath "C:\Windows\SYSVOL" `
 -Force:$true
+
+Install-WindowsFeature DHCP –IncludeManagementTools
+Install-WindowsFeature DNS -IncludeManagementTools
